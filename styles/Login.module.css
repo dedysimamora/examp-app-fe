@@ -1,0 +1,39 @@
+.neuInside {
+  outline: none !important;
+  border: none !important;
+  color: #595959 !important;
+  background: #dde1e7 !important;
+  border-radius: 25px !important;
+  height: 45px !important;
+  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #e0e0e0 !important;
+}
+
+.neuInside input {
+  background: transparent;
+}
+
+
+
+.buttonLogin {
+  margin-top: 30px;
+  height: 45px;
+  color: white;
+  font-weight: 700;
+  background-color: #68843a;
+}
+
+.buttonLogin:hover,
+.buttonLogin:focus {
+  color: white;
+  background-color: #52672f !important;
+}
+
+h1.titleText {
+  font-weight: 700;
+  color: #68843a;
+}
+
+.errorMessage {
+  text-align: center;
+  color: #68843a !important;
+}

@@ -14,3 +14,33 @@ a {
 * {
   box-sizing: border-box;
 }
+
+
+.neumorpishTimbul .ant-card-body {
+  border-radius: 24px;
+  background: #e0e0e0;
+  padding: 40px 30px;
+  box-shadow: -3px -3px 7px #ffffff73,
+              2px 2px 5px rgba(94, 104, 121, 0.288);
+}
+
+
+.formLogin .ant-form-item-explain-error{
+  margin-left: 20px;
+  color: #68843A !important;
+}
+
+
+.ant-input-prefix {
+  margin-left: 5px !important;
+}
+
+.ant-input-affix-wrapper-status-error .anticon-user {
+  color: rgba(0, 0, 0, 0.45) !important;
+}
+
+.ant-input-affix-wrapper-status-error .ant-input-prefix {
+  color: rgba(0, 0, 0, 0.45) !important;
+}
+
+
