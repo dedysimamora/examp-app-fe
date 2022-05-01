@@ -1,16 +1,41 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { encrypt } from "../utils";
+import { useRouter } from "next/router";
 import { Form, Input, Button, Typography, Row, Col, Card } from "antd";
-import { UserOutlined, LockOutlined } from '@ant-design/icons';
+import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import styles from "../styles/Login.module.css";
+import {loginApi} from "../service/nextApi"
+export async function getStaticProps(context) {
+  return {
+    props: {}, // will be passed to the page component as props
+  };
+}
 
 export default function Login() {
+  const router = useRouter();
   const { Title, Paragraph } = Typography;
   const [errorMessage, seterrorMessage] = useState("");
   const onFinish = (data) => {
-    console.log(data);
+
+    let loginPayload = {
+      identifier: data.username,
+      password: encrypt(data.password),
+    }
+
+    loginApi(loginPayload)
+    .then((response) => {
+      if(response.data.success){
+        router.push("/dashboard");
+      }
+    })
+    .catch(function (error) {
+      console.log(error, "<<<< error");
+    });
+
   };
   const onFinishFailed = (data) => {
-    console.log(data);
+    console.log(data, "<<<< failed finish");
   };
   return (
     <>
@@ -57,7 +82,11 @@ export default function Login() {
                   },
                 ]}
               >
-                <Input prefix={<UserOutlined />}  placeholder="Username" className={styles.neuInside} />
+                <Input
+                  prefix={<UserOutlined />}
+                  placeholder="Username"
+                  className={styles.neuInside}
+                />
               </Form.Item>
 
               <Form.Item
@@ -71,7 +100,7 @@ export default function Login() {
                 ]}
               >
                 <Input.Password
-                prefix={<LockOutlined />} 
+                  prefix={<LockOutlined />}
                   placeholder="Password"
                   className={styles.neuInside}
                 />

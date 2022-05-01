@@ -15,7 +15,74 @@ a {
   box-sizing: border-box;
 }
 
+.ant-layout-header .ant-menu {
+  line-height: 35px !important;
+  border-bottom: none !important;
+  padding: 10px 20px;
+  
+}
 
+.ant-layout-header .ant-menu-item-selected {
+  /* padding: 10px 20px !important; */
+  box-shadow: 4px 4px 12px #b8b9be, -4px -4px 12px #ffffff !important;
+  border-radius: 10px;
+}
+
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected:hover{
+  /* box-shadow: -4px -4px 12px #b8b9be, 4px 4px 12px #ffffff !important; */
+  border-radius: 10px;
+  box-shadow: inset 3px 3px 4px #b8b9be, inset -4px -4px 3px #FFFFFF !important; 
+}
+
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover{
+  /* box-shadow: -4px -4px 12px #b8b9be, 4px 4px 12px #ffffff !important; */
+  border-radius: 10px;
+  box-shadow: inset 3px 3px 4px #b8b9be, inset -4px -4px 3px #FFFFFF; 
+}
+
+.ant-layout-header .ant-menu-item-selected .ant-menu-title-content {
+  color: #68843A;
+}
+
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected::after {
+  border: none !important;
+  
+}
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected, .ant-menu-item-activ > .ant-menu-item:hover::after {
+  border: none !important;
+  
+}
+/* .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active > .ant-menu-item:hover::after {
+  border: none !important;
+} */
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover::after {
+  border: none !important;
+}
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active::after {
+  border: none !important;
+}
+.ant-menu-horizontal > .ant-menu-item::after {
+  transition: none !important;
+}
+
+.menuContainer {
+  color: #9a9a9a !important;
+  font-weight: 700;
+  margin-left: 10px !important;
+}
+
+.centeringParentVertical {
+  display: flex !important;
+  align-items: center !important;
+  height: 100%;
+}
+
+.neumorpismHeaderLogoDiv {
+  border-radius: 10px;
+  padding: 6px 20px;
+  background: #e0e0e0;
+  box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important;
+}
 .neumorpishTimbul .ant-card-body {
   border-radius: 24px;
   background: #e0e0e0;

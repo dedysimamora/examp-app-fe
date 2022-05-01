@@ -1,0 +1,15 @@
+
+
+.headerComponentTitle {
+    margin-bottom: 0px !important;
+    font-weight: 700 !important;
+    color: #68843a !important;
+  }
+
+  .headerNameText {
+      font-weight: 700 !important;
+      text-align: right !important;
+      margin-right: 5px !important;
+      margin-bottom: 0px !important;
+      color: #9a9a9a !important;
+  }
